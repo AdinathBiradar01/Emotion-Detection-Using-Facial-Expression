@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Camera Access</title>
+    <style>
+        video {
+            width: 100%;
+            max-width: 600px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Live Camera Access</h1>
+
+    <button id="startButton">Start Camera</button>
+    <button id="stopButton" disabled>Stop Camera</button>
+    
+    <br><br>
+    
+    <video id="videoElement" autoplay></video>
+
+    <script>
+        const startButton = document.getElementById('startButton');
+        const stopButton = document.getElementById('stopButton');
+        const videoElement = document.getElementById('videoElement');
+
+        let stream;
+
+        // Start camera function
+        startButton.addEventListener('click', async () => {
+            try {
+                // Request access to the user's camera
+                stream = await navigator.mediaDevices.getUserMedia({ video: true });
+
+                // Set the video element's source to the camera stream
+                videoElement.srcObject = stream;
+
+                // Enable stop button and disable start button
+                startButton.disabled = true;
+                stopButton.disabled = false;
+            } catch (error) {
+                console.error('Error accessing the camera:', error);
+                alert('Camera access denied or unavailable!');
+            }
+        });
+
+        // Stop camera function
+        stopButton.addEventListener('click', () => {
+            if (stream) {
+                // Stop all video tracks (camera)
+                stream.getTracks().forEach(track => track.stop());
+
+                // Clear video element source
+                videoElement.srcObject = null;
+
+                // Disable stop button and enable start button
+                startButton.disabled = false;
+                stopButton.disabled = true;
+            }
+        });
+    </script>
+
+</body>
+</html>

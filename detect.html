@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emotion Detection</title>
+  <link rel="stylesheet" href="detect.css">
+</head>
+<body>
+  <nav>
+    <h2 class="logo">Emotion Recognition</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="detect.html">Detect Emotion</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <main class="detect-content">
+    <div class="camera-container">
+      <!-- 'playsinline' and 'muted' attributes help comply with browser autoplay policies -->
+      <video id="video" playsinline muted></video>
+      <button id="capture-btn" class="btn">Capture Emotion</button>
+    </div>
+    <div class="result-container">
+      <h2>Detected Emotion:</h2>
+      <p id="emotion-result">No emotion detected yet.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Rohan Garad. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

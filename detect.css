@@ -1,0 +1,194 @@
+
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+    line-height: 1.6; /* Better line spacing */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+body {
+    background-color: #181818; /* Darker background for depth */
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* Navbar */
+nav {
+    background-color: #242424; /* Darker color for the navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px; /* Adequate padding for a balanced layout */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+/* Logo */
+.logo {
+    color: #76ff03; /* Bright green for logo */
+    font-size: 32px; /* Larger font size for prominence */
+    font-weight: bold; /* Bold text for emphasis */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8), 0 0 25px #76ff03; /* Enhanced shadow for depth */
+    letter-spacing: 2px; /* Spacing between letters */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition effects */
+}
+
+/* Hover effect */
+.logo:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+    color: #ffffff; /* Change color on hover */
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.9), 0 0 25px #81c784; /* Brighter shadow effect on hover */
+}
+
+/* Optional: Animation */
+@keyframes logoAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Applying animation */
+.logo {
+    animation: logoAnimation 3s infinite; /* Continuous rotation animation */
+}
+
+/* Navigation Links */
+nav ul {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Display list items in a row */
+    gap: 20px; /* Space between navigation items */
+}
+
+nav a {
+    font-size: large;
+    color: #e0e0e0; /* Light gray color for links */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Add padding for better touch target */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effect */
+    border-radius: 5px; /* Rounded corners for buttons */
+}
+
+/* Hover effect for links */
+nav a:hover {
+    color: #ffffff; /* Change text color on hover */
+    background-color: #76ff03; /* Bright green background on hover */
+}
+
+/* Main Content */
+.detect-content {
+    padding: 40px; /* Padding around content */
+    text-align: center; /* Center align text */
+}
+
+/* Camera Container */
+.camera-container {
+    max-width: 600px;
+    margin: 20px auto; /* Center container */
+    position: relative; /* Position for button */
+    border: 5px solid #4CAF50; /* Stylish border */
+    border-radius: 15px; /* Rounded corners for border */
+    overflow: hidden; /* Ensure no overflow from child elements */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Shadow for depth */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for contrast */
+    padding: 10px; /* Padding inside the container */
+}
+
+/* Video Element */
+#video {
+    width: 100%; /* Full width for video */
+    max-width: 600px; /* Max width for video */
+    border-radius: 10px; /* Rounded corners for video */
+}
+
+/* Capture Button */
+#capture-btn {
+    background-color: #4CAF50; /* Button color */
+    color: #121212; /* Button text color */
+    padding: 12px 24px; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    text-decoration: none; /* No underline */
+    margin-top: 10px; /* Space above button */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for button */
+}
+
+#capture-btn:hover {
+    background-color: #66BB6A; /* Brighter green on hover */
+}
+
+
+/* Result Container */
+.result-container {
+    margin-top: 30px; /* Space above result container */
+    padding: 15px; /* Padding for result container */
+    background-color: rgba(76, 175, 80, 0.1); /* Light green background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+.result-container h2 {
+    color: #4CAF50; /* Heading color */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.result-container p {
+    font-size: 18px; /* Font size for paragraph */
+}
+
+/* Footer */
+footer {
+    background-color: #1f1f1f; /* Footer background */
+    color: #e0e0e0; /* Footer text color */
+    text-align: center; /* Center align footer text */
+    padding: 15px; /* Padding for footer */
+    position: relative; /* Positioning for footer */
+    bottom: 0; /* Align to bottom */
+    width: 100%; /* Full width */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        gap: 10px; /* Smaller gap between items */
+    }
+
+    .detect-content {
+        padding: 20px; /* Less padding on small screens */
+    }
+
+    .camera-container {
+        margin: 10px auto; /* Center container with less margin */
+    }
+
+    #video {
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    .result-container h2 {
+        font-size: 24px; /* Smaller heading on small screens */
+    }
+
+    .result-container p {
+        font-size: 16px; /* Smaller paragraph text on small screens */
+    }
+}

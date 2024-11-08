@@ -1,0 +1,408 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+  
+body {
+    background-color: #181818; /* Darker background for depth */
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+  
+/* Navbar */
+nav {
+    background-color: #242424; /* Darker color for the navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px; /* Adequate padding for a balanced layout */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+/* Logo */
+.logo {
+    color: #76ff03; /* Bright green for logo */
+    font-size: 32px; /* Larger font size for prominence */
+    font-weight: bold; /* Bold text for emphasis */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8), 0 0 25px #76ff03; /* Enhanced shadow for depth */
+    letter-spacing: 2px; /* Spacing between letters */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition effects */
+}
+
+/* Hover effect */
+.logo:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+    color: #ffffff; /* Change color on hover */
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.9), 0 0 25px #81c784; /* Brighter shadow effect on hover */
+}
+
+/* Optional: Animation */
+@keyframes logoAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Applying animation */
+.logo {
+    animation: logoAnimation 3s infinite; /* Continuous rotation animation */
+}
+
+/* Navigation Links */
+nav ul {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Display list items in a row */
+    gap: 20px; /* Space between navigation items */
+}
+
+nav a {
+    font-size: large;
+    color: #e0e0e0; /* Light gray color for links */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Add padding for better touch target */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effect */
+    border-radius: 5px; /* Rounded corners for buttons */
+}
+
+/* Hover effect for links */
+nav a:hover {
+    color: #ffffff; /* Change text color on hover */
+    background-color: #76ff03; /* Bright green background on hover */
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 30px; /* Increased gap */
+    padding: 40px 20px; /* More padding */
+}
+  
+/* Heading */
+.main-heading {
+    font-size: 48px; /* Increased font size for greater prominence */
+    font-weight: bold; /* Bold text for emphasis */
+    text-transform: uppercase; /* Uppercase letters */
+    letter-spacing: 3px; /* Increased spacing between letters */
+    color: #f5f5f5; /* Light gray color for contrast */
+    background: linear-gradient(90deg, #76ff03, #81c784); /* Gradient background */
+    background-clip: text; /* Clip background to text for gradient effect */
+    -webkit-text-fill-color: transparent; /* Fill color transparent for gradient */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6); /* Enhanced shadow for depth */
+    transition: transform 0.3s ease, text-shadow 0.3s ease; /* Smooth transition effects */
+}
+
+/* Hover effect */
+.main-heading:hover {
+    transform: scale(1.01); /* Slightly increase size on hover */
+    text-shadow: 3px 3px 9px rgba(0, 0, 0, 0.8), 0 0 25px #76ff03; /* Enhanced shadow effect on hover */
+}
+
+/* Buttons */
+.btn {
+    background: linear-gradient(90deg, #76ff03, #81c784); /* Gradient background for depth */
+    color: #ffffff; /* White text color for contrast */
+    padding: 14px 28px; /* Increased padding for better touch targets */
+    border: none; /* No border */
+    border-radius: 8px; /* More rounded corners */
+    font-size: 16px; /* Increased font size for readability */
+    font-weight: bold; /* Bold text for emphasis */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-decoration: none; /* No underline */
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effect */
+.btn:hover {
+    background: linear-gradient(90deg, #81c784, #76ff03); /* Invert gradient on hover */
+    transform: translateY(-2px); /* Slightly raise the button on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+/* Active effect */
+.btn:active {
+    transform: translateY(1px); /* Slightly depress the button when clicked */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Reduced shadow on active */
+}
+
+/* Features Section */
+.features {
+    padding: 30px;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    color: #e0e0e0;
+}
+
+.features h2 {
+    color: #76ff03;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Card Layout */
+.feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.feature-card {
+    background-color: rgba(76, 175, 80, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    max-width: 240px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(76, 175, 80, 0.2);
+}
+
+/* Icons and Text */
+.icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #76ff03;
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    color: #76ff03;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #e0e0e0;
+    margin: 0;
+}
+
+
+/* How It Works Section */
+.how-it-works {
+    padding: 30px;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #2b2b2b;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+.how-it-works h2 {
+    color: #76ff03;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.how-it-works p {
+    margin-bottom: 40px;
+    font-size: 16px;
+    color: #cccccc;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* Steps Container */
+.steps {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    padding: 20px;
+    justify-content: center;
+    /* padding-left: 50px; */
+    background-color: rgba(76, 175, 80, 0.1);
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+}
+
+/* Step Number */
+.step-number {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background-color: #76ff03;
+    color: #242424;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Connector Line */
+.steps::before {
+    content: '';
+    position: absolute;
+    left: 29px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #76ff03;
+    z-index: -1;
+}
+
+/* Step Content */
+.step-content h3 {
+    font-size: 20px;
+    color: #76ff03;
+    margin-bottom: 10px;
+}
+
+.step-content p {
+    font-size: 16px;
+    color: #e0e0e0;
+    margin: 0;
+}
+
+
+/* Use Cases Section */
+.use-cases {
+    padding: 30px;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    color: #e0e0e0;
+}
+
+.use-cases h2 {
+    color: #76ff03;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.use-cases p {
+    font-size: 16px;
+    color: #cccccc;
+    margin-bottom: 40px;
+}
+
+/* Card Layout */
+.use-case-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.use-case-card {
+    background-color: rgba(76, 175, 80, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    max-width: 240px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.use-case-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(76, 175, 80, 0.2);
+}
+
+/* Icons and Text */
+.icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #76ff03;
+}
+
+.use-case-card h3 {
+    font-size: 18px;
+    color: #76ff03;
+    margin-bottom: 10px;
+}
+
+.use-case-card p {
+    font-size: 14px;
+    color: #e0e0e0;
+    margin: 0;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #1f1f1f; /* Dark background for footer */
+    color: #e0e0e0; /* Light gray text color */
+    text-align: center; /* Centered text */
+    padding: 20px; /* Increased padding for better spacing */
+    border-top: 2px solid #76ff03; /* Green border for distinction */
+    position: relative; /* Allows for positioning of child elements */
+    bottom: 0; /* Sticks the footer at the bottom if needed */
+    width: 100%; /* Full width footer */
+    font-size: 14px; /* Slightly larger font size */
+}
+
+/* Footer Links */
+footer a {
+    color: #76ff03; /* Bright green for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+footer a:hover {
+    color: #FF9800; /* Change link color on hover */
+    text-decoration: underline; /* Underline on hover for emphasis */
+}
+
+/* Footer Text */
+footer p {
+    margin: 5px 0; /* Space between paragraphs */
+    line-height: 1.5; /* Line height for readability */
+}
